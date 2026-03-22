@@ -2,12 +2,34 @@ import { SectionTitle } from '@fixora/ui';
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-4xl flex-col items-start justify-center gap-4 p-8">
-      <p className="text-sm uppercase tracking-[0.2em] text-gray-500">Fixora SaaS</p>
-      <SectionTitle>Service Business Operating System</SectionTitle>
-      <p className="max-w-xl text-gray-700">
-        Monorepo foundation ready: Next.js web, Expo mobile, and NestJS API with shared UI and shared types.
-      </p>
+    <main className="mx-auto grid min-h-screen w-full max-w-6xl items-center px-6 py-10 md:px-10">
+      <section className="hero-card entry-rise w-full rounded-3xl p-7 md:p-12">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-strong">
+          Field Service Platform
+        </p>
+        <SectionTitle className="mt-3 text-4xl leading-tight md:text-6xl">
+          Built for the crews that keep cities running.
+        </SectionTitle>
+        <p className="entry-rise-delay mt-5 max-w-2xl text-base text-muted md:text-lg">
+          Fixora gives plumbing, electrical, and maintenance teams a polished operating system for
+          dispatch, job execution, and revenue tracking across web and mobile.
+        </p>
+
+        <div className="entry-rise-delay mt-8 grid gap-3 sm:grid-cols-3">
+          <div className="rounded-2xl border border-outline bg-white/75 p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Dispatch</p>
+            <p className="mt-2 text-sm text-muted">Schedule jobs, route technicians, and avoid overlaps.</p>
+          </div>
+          <div className="rounded-2xl border border-outline bg-white/75 p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Jobs</p>
+            <p className="mt-2 text-sm text-muted">Track status, notes, and checklists in real time.</p>
+          </div>
+          <div className="rounded-2xl border border-outline bg-white/75 p-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Billing</p>
+            <p className="mt-2 text-sm text-muted">Move from estimate to paid invoice with fewer clicks.</p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

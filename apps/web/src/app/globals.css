@@ -1,26 +1,58 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f1e7;
+  --foreground: #1f2329;
+  --surface: #fffdf9;
+  --muted: #5f6470;
+  --brand: #c26527;
+  --brand-strong: #93481a;
+  --outline: #d8d2c8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-outline: var(--outline);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+body {
+  background:
+    radial-gradient(circle at 85% 15%, rgb(194 101 39 / 18%), transparent 36%),
+    radial-gradient(circle at 10% 90%, rgb(24 54 78 / 14%), transparent 38%),
+    linear-gradient(180deg, #f8f3eb 0%, #f5efe4 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans), 'Trebuchet MS', 'Segoe UI', sans-serif;
+  min-height: 100vh;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.hero-card {
+  border: 1px solid var(--outline);
+  background: color-mix(in srgb, var(--surface) 94%, white 6%);
+  box-shadow: 0 28px 48px rgb(26 30 36 / 10%);
+}
+
+.entry-rise {
+  animation: entry-rise 600ms ease-out both;
+}
+
+.entry-rise-delay {
+  animation: entry-rise 800ms ease-out both;
+}
+
+@keyframes entry-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

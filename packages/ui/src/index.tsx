@@ -1,5 +1,10 @@
 import * as React from 'react';
 
-export function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: '1.5rem', fontWeight: 700 }}>{children}</h2>;
+type SectionTitleProps = {
+  children: React.ReactNode;
+  className?: string;
+};
+
+export function SectionTitle({ children, className }: SectionTitleProps) {
+  return <h2 className={className ?? 'text-2xl font-bold'}>{children}</h2>;
 }
