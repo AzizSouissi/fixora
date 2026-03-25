@@ -1,4 +1,5 @@
 import { SectionTitle } from '@fixora/ui';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -28,6 +29,16 @@ export default function Home() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-brand">Billing</p>
             <p className="mt-2 text-sm text-muted">Move from estimate to paid invoice with fewer clicks.</p>
           </div>
+        </div>
+
+        <div className="entry-rise-delay mt-8 flex flex-wrap items-center gap-3">
+          <Link
+            href="/login"
+            className="rounded-xl bg-brand px-5 py-2 text-sm font-semibold text-white transition hover:bg-brand-strong"
+          >
+            Go To Login
+          </Link>
+          <span className="text-sm text-muted">Next after login: dashboard and jobs workflow.</span>
         </div>
       </section>
     </main>

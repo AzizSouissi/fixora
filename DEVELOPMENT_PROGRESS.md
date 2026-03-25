@@ -29,7 +29,7 @@ Status legend: [ ] not started, [~] in progress, [x] done.
 | Status | Phase                 | Branch Name                     | Outcome                                             |
 | ------ | --------------------- | ------------------------------- | --------------------------------------------------- |
 | [ ]    | Foundation hardening  | feature/devops-cicd-hardening   | CI stable, lint/typecheck/build/test gates enforced |
-| [ ]    | Auth + tenant model   | feature/auth-multi-tenant-login | Role-based auth, tenant isolation, secure sessions  |
+| [x]    | Auth + tenant model   | feature/auth-multi-tenant-login | Role-based auth, tenant isolation, secure sessions  |
 | [ ]    | Customer + job flow   | feature/jobs-create-update-flow | Customer CRUD, job lifecycle, assignment flow       |
 | [ ]    | Dispatch calendar     | feature/calendar-dispatch-board | Drag-drop scheduling and technician dispatch board  |
 | [ ]    | Invoicing + payments  | feature/invoices-payments-core  | Estimates, invoices, payment tracking               |
